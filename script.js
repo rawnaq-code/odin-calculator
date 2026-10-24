@@ -146,4 +146,42 @@ buttons.addEventListener("click", (e) => {
     }
 });
 
+
+document.addEventListener("keydown", (e) => {
+    let key = e.key;
+    let buttonText;
+
+    if (/^\d$/.test(key)) {
+        buttonText = key;
+    } else if (key === "+") {
+        buttonText = "+";
+    } else if (key === "-") {
+        buttonText = "-";
+    } else if (key === "*") {
+        buttonText = "X";
+    } else if (key === "/") {
+        buttonText = "/";
+    } else if (key === ".") {
+        buttonText = ".";
+    } else if (key === "Enter" || key === "=") {
+        buttonText = "=";
+    } else if (key === "Backspace") {
+        buttonText = "del";
+    } else if (key === "Escape" || key === "Delete") {
+        buttonText = "clear";
+    } else {
+        return;
+    }
+
+    e.preventDefault();
+
+    const button = [...buttons.querySelectorAll("button")]
+        .find((btn) => btn.textContent.trim() === buttonText);
+
+    if (button) {
+        button.click();
+    }
+});
+
+
 updateDisplay();
