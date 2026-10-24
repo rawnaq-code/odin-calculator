@@ -4,7 +4,7 @@ A simple calculator built with HTML, CSS, and JavaScript as part of [The Odin Pr
 
 ## Live Demo
 
-[View Live](YOUR_LIVE_LINK_HERE)
+[View Live](https://rawnaq-code.github.io/odin-calculator/)
 
 ## GitHub Repository
 
